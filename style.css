@@ -1,0 +1,200 @@
+*{margin:0px; padding:0px; outline:0px;}
+h1, h2, h3, h4, h5, h6, p, ul, label{margin:0px; padding:0px;}
+a, a:hover{text-decoration: none;}
+a img{border: 0px;}
+a:focus{outline:none; outline-offset:0px; text-decoration:none;}
+body{font-family:'Roboto', sans-serif;font-size: 14px; font-weight:400; color:#444;}
+.main_container{margin:0px;}
+.main_container img{max-width:100%; height:auto;}
+.header_bg{/*background:rgba(234,234,234,0.3);*/ padding:15px 0px;}
+.logo{margin:10px 0px 0px 0px;}
+.logo span{display:block; font-size:15px; font-weight:400; padding:5px 0px; color:#083b50; letter-spacing:2px;}
+.call_us{text-align:right; font-size:14px; font-weight:400;}
+.call_us{color:#fd3116;}
+.call_us p:first-child{margin:24px 14px 0px 0px;}
+.call_us span{letter-spacing:2px; color:#444;}
+.social_list{text-align:center;}
+.mob_menu{display:none;}
+.nav_sec{background:#00237d;}
+.nav_sec ul{text-align:center;}
+.nav_sec ul li{list-style:none; display:inline-block;}
+.nav_sec ul li a{display:block; font-size:16px; letter-spacing:2px; text-transform:uppercase; padding:13px 15px; color:#fff;}
+.nav_sec ul li a:hover, .nav_sec ul li a.active{color:#aae5fe;}
+.banner_sec{margin:0px;}
+.banner_sec ul li{list-style:none;}
+.banner_sec img{width:100%;}
+.top_services{padding:35px 0px; background:#fafafa; border-bottom:1px solid #ccc; margin-bottom:35px;}
+.top_services h1{text-align:center; font-weight:400; font-size:22px; color:#000; text-transform:uppercase; margin:10px 0px 35px 0px; position:relative;}
+.top_services h1:before{content:''; position:absolute; left:29%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.top_services h1:after{content:''; position:absolute; right:29%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.top_services ul{text-align:center; letter-spacing:20px; list-style:none;}
+.top_services ul li{display:inline-block;}
+.top_services ul li a{color:#000; font-size:16px; letter-spacing:normal; vertical-align:top; display:inline-block;}
+.top_services ul li a:hover{color:#0730c4;}
+.cer_box{vertical-align:top; letter-spacing:normal; width:165px; height:150px; border-radius:8px; overflow:hidden; margin-top:13px;}
+.cer_box img{border-radius:8px; height:150px;  width:165px;  -webkit-transition: all 3s ease; transition: all 3s ease;}
+.cer_box:hover img{-webkit-transform:scale(1.3); transform:scale(1.3);}
+.title_h{margin-bottom:30px;}
+.title_h h2{text-align:center; font-weight:400; font-size:22px; text-transform:uppercase; color:#000; margin:40px 0px; position:relative;}
+.title_h h2:before{content:''; position:absolute; left:31%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.title_h h2:after{content:''; position:absolute; right:31%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.title_h p{margin-top:15px; line-height:25px;}
+.title_h p a{color:#203abe; text-decoration:underline;}
+.title_h p a:hover{color:#f93a3a;}
+.title_h figure img{margin-top:15px;}
+.popular_tours{margin:0px 0px 30px 0px;}
+.popular_tours h3{text-align:center; text-transform:uppercase; font-weight:400; font-size:22px; color:#000; margin:10px 0px 50px 0px; position:relative;}
+.popular_tours h3:before{content:''; position:absolute; left:29%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.popular_tours h3:after{content:''; position:absolute; right:29%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.popular_tours ul{list-style:none; letter-spacing:30px; text-align:center;}
+.popular_tours ul li{letter-spacing:normal; display:inline-block; vertical-align:top; text-align:left; width:258px;}
+.img_box{position:relative;}
+.img_box img{width:100%;}
+.popular_tours h1 a{font-weight:400; font-size:16px; color:#fff; display:block; text-align:center; background:#1d2324; padding:15px 10px;}
+.popular_tours h1 a:hover{color:#4ddefd;}
+.overlay{position:absolute; left:0px; top:0px; bottom:0px; right:0px; background:rgba(57,76,84,0.9); transform:scale(0); transition:all 0.5s ease 0s; padding:15px; color:#fff;}
+.img_box:hover .overlay{transform:scale(1.0);}
+.overlay h2{font-size:16px; color:#fff; text-transform:uppercase; margin:50px 0px 10px 0px; text-align:center;}
+.overlay p{margin-bottom:7px; font-size:12px; text-align:center;}
+.footer-bg{background:url(../images/footer_bg.jpg) no-repeat center top; background-size:cover; margin-top:50px; color:#ddd;}
+.back_bg{background:rgba(37,33,37,0.8); padding:30px 0px;}
+.footer-bg ul{list-style:none;}
+.footer-bg ul li a{color:#ddd; font-size:15px; padding:1px 0px; display:inline-block;}
+.footer-bg ul li a:hover{color:#fff;}
+.footer-bg h2{font-size:22px; font-weight:400; color:#fff; font-family:georgia; margin-bottom:13px;}
+.footer-bg p span{font-size:15px;}
+.view_more{display:block; margin:0 auto; width:100px; background:#001a77; border-radius:5px; text-align:center; margin-top:30px;}
+.view_more a{padding:7px; color:#fff; display:block; font-size:16px;}
+.view_more a:hover{color:#dceffa;}
+.sub_form{max-width:280px; width:100%; background:#fafafa; border:0px; height:35px; padding:0px 15px; box-sizing:border-box; border-radius:4px 0px 0px 4px; color:#000;}
+.sub_box{position:relative; margin-top:30px;}
+.sub_btn{position:absolute; right:0px; top:0px; height:35px; color:#fff; background:#06F; border-radius:0px 4px 4px 0px; box-shadow:none; border:0px; padding:0px 10px;}
+.sicial_h a:hover{opacity:0.5;}
+/*==========About Us Css======================*/
+.common_banner{margin:0px 0px 40px 0px; padding:0px; background:url(../images/common_banner.jpg) center top no-repeat; background-size:cover; height:250px;}
+.about_con{margin:0px;}
+.about_con img{margin:0px 30px 30px 0px; float:left;}
+.about_con h2{font-size:26px; font-weight:300; margin-bottom:10px; font-family:georgia; letter-spacing:2px; text-transform:uppercase;}
+.about_con p{line-height:22px; font-size:14px; text-align:justify; margin-bottom:15px;}
+.about_con p strong{text-transform:uppercase; display:block; margin-bottom5px; font-size15px;}
+.about_con p b{color:red; font-size:15px; font-weight:500;}
+.common_h{text-align:center; font-weight:400; font-size:22px; color:#000; text-transform:uppercase; margin:10px 0px 35px 0px; position:relative;}
+.common_h:before{content:''; position:absolute; left:29%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.common_h:after{content:''; position:absolute; right:29%; top:11px; width:140px; border-bottom:1px solid #ccc;}
+.services_box{list-style:none; letter-spacing:30px; text-align:center;}
+.services_box li{display:inline-block; letter-spacing:normal; vertical-align:top; width:355px; margin-bottom:30px; padding:25px; background:#fafafa;}
+.services_box li img{width:300px; height:250px; margin:0 auto; display:block; margin-bottom:15px;}
+.services_box h3{color:##252525;  font-size:18px; margin-bottom:10px; text-align:left;}
+.services_box p{text-align:left;}
+.overlay a{color:#fff; font-size:18px; margin-top:36%; display:inline-block;}
+.common_h.margin_bottom{margin-bottom:33px;}
+.img_right{float:right; margin:0px 0px 0px 30px;}
+.alternet_info{margin:30px 0px 0px 0px; border-bottom:1px solid #f4f3f5;}
+.alternet_info:last-child{border-bottom:0px;}
+.about_con h4{font-size:26px; font-weight:300; letter-spacing:2px; margin-bottom:30px;}
+.add_icon{background:url(../images/add_icon.png) left 20px no-repeat; background-size: 45px; min-height:46px; font-size:16px; padding:18px 0px 0px 55px;}
+.mob_icon{background:url(../images/phone_icon.png) left center no-repeat; background-size: 45px; min-height:46px; font-size:16px; padding:10px 0px 0px 55px; margin:20px 0px;}
+.email_icon{background:url(../images/email_icon.png) left center no-repeat; background-size: 45px; min-height:46px; font-size:16px; padding:10px 0px 0px 55px;}
+/*==================Landing pages css===================*/
+.t_heading{font-size:20px; font-weight:500; border-bottom:2px solid #00237D; text-transform:uppercase; padding-bottom:7px; text-align:center;}
+.img_bgColor{margin-top:20px; position:relative;}
+.img_bgColor img{border-radius:4px;}
+.box_bg{position:absolute; left:0px;  bottom:0px; width:100%; background:rgba(255,0,0,0.8); z-index:99; color:#fff; padding:10px; border-radius:0px 0px 4px 4px;}
+.box_bg a{color:#fff; font-size:20px; font-weight:500;}
+.box_bg a:hover{color:#222;}
+.phone_box {
+    border: 1px solid #DDD;
+    margin:20px 0px 0px 0px;
+    padding:7px;
+    text-align: center;
+}
+.phone_box h3 {
+    font-size: 24px;
+    font-weight:500;
+    line-height: 40px;
+}
+.phone_box  p{font-size:14px; padding-bottom:10px;}
+.tab_heading{font-size:27px; font-weight:500;}
+.tab_cont{margin-top:30px;}
+.tab_list{list-style:none; border-bottom:3px solid #D71920; margin-bottom:30px;}
+.tab_list li{display:inline-block; vertical-align:top; margin-right:5px; background:#D71920; border-radius:3px 3px 0px 0px;}
+.tab_list li a{display:block; font-size:16px; color:#fff; font-weight:500; text-transform:uppercase; padding:11px 17px;}
+.tab_list li:hover, .tab_list li.active{background:#00237D;}
+.tab_cont h3{font-size:22px; margin-bottom:20px;}
+.tab_cont h4{font-size:18px; margin-top:20px;}
+.tab_cont p{font-size14px; line-height:22px; margin-top:7px;}.tab_title h5 span{margin-left:20px;}
+.tab_cont p a{color:#D71920; font-size:16px; font-wait:500;}
+
+
+
+.itinerary_info h2{font-size:16px; font-weight:normal; margin:20px 0px; border-bottom:1px solid #ddd; padding-bottom:10px;}
+.itinerary_info small{font-size:16px; color:#083b50;}
+.day_list{margin-top:40px; position:relative;}
+.day_list li{list-style:none; position:relative; margin-bottom:30px;}
+.day_list::before{background:#083b50; width:5px; position:absolute; left:100px; bottom:0px; top:0px; content:"";}
+.day_list li time{width:110px;}
+.day_list li time span{font-size:22px; text-transform:uppercase;}
+.point{width:20px; height:20px; border-radius:50%; background:#D71920; position:absolute; left:92px; top:-2px;}
+.list_view{margin:-30px 0px 0px 140px;}
+.list_view h3 small{display:block; font-size:16px; font-weight:500; margin-bottom:7px; color:#000;}
+.list_view h3{font-size:16px; font-weight:normal; line-height:22px; color:#000; text-transform:uppercase; border-bottom:1px solid #ddd; padding-bottom:10px;}
+.list_view p{margin-top:15px;}
+.itinerary_title{margin:30px 0px 0px 0px; border-top:1px solid #ddd; padding:10px 0px;}
+.itinerary_title label{width:25%; display:inline-block; float:left; color:#083b50; font-size:18px; font-weight:400;}
+.itinerary_title span{width:75%; float:left;}
+.itinerary_title span strong{font-size:22px; font-weight:400;}
+.itinerary_title span ul li{font-size:16px; line-height:24px; margin-left:20px;}
+.name_box{width:65%; display:black; border:1px solid #ccc; padding:5px 10px; border-radius:4px; margin-bottom:10px; box-sizing:border-box;}
+.text_area{width:65%; display:black; height:120px; border:1px solid #ccc; padding:10px 10px; border-radius:4px; margin-bottom:10px; box-sizing:border-box;}
+.name_box2{display:block;}
+.submit_cc{color:#fff; background:#06F; border-radius:3px; box-shadow:none; border:0px; padding:10px; display:block;}
+
+/*==================Media css===================*/
+@media screen and (max-width:992px){
+.logo span, .nav_sec ul li a{font-size:12px;}
+.top_services h1::before{left:17%;}	
+.top_services h1::after{right:17%;}	
+.popular_tours ul li{margin-bottom:30px;}
+.popular_tours h3::before{left:17%;}
+.popular_tours h3::after{right:17%;}
+.title_h h2::before{left:17%;}
+.title_h h2::after{right:17%;}
+.sub_btn{right:-5px;}
+}
+@media screen and (max-width:767px){
+.logo{text-align:center;}
+.logo img{width:150px;}
+.social_list img{width:110px;}
+.call_us{text-align:center;}
+.nav_sec{padding:10px 0px;}
+.mob_menu{display:block; text-align:right; cursor:pointer;}
+.mob_menu a{color:#fff; font-size:14px; font-weight:300; letter-spacing:2px; text-transform:uppercase; border:1px solid #fafafa; border-radius:3px; padding:5px 8px; display:inline-block;}
+.mob_menu a:hover{border-color:#ccc; color:#ccc;}
+.nav_sec ul{display:none;}
+.nav_sec ul li{display:block; text-align:left; border-bottom:1px solid #2015fd;}
+.nav_sec ul li:last-child{border-bottom:0px;}
+.nav_sec ul li a{padding:7px 10px; font-size:14px; display:inline-block;}
+.top_services h1::before, .popular_tours h3::before, .title_h h2::before{width:50px; left:0;}
+.top_services h1::after, .popular_tours h3::after, .title_h h2::after{width:50px; right:0;}
+.sub_form{max-width:100%;}
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
