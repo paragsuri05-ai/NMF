@@ -1,111 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Network Media Inc.</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="style.css">
+<title>Network Media Inc.</title>
+
+<link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-<div class="logo">Network Media Inc.</div>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <div class="logo">🚀 Network Media</div>
+
+  <ul class="menu">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 
-<!-- HERO -->
-<section class="hero">
-<div class="hero-content">
-<h1>Expand Globally.<br>Grow Faster.</h1>
-
-<p>
-Network Media helps brands expand across India, North America,
-Europe & Asia. We scale businesses on Amazon, Walmart,
-Flipkart, Myntra, AJIO, Nykaa & more.
-</p>
-
-<a href="#services" class="btn">Explore Services</a>
-</div>
+<!-- ================= HERO ================= -->
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <h1>Expand Globally. Grow Faster.</h1>
+    <p>We scale brands across Amazon, Walmart, Flipkart, Myntra, AJIO, Nykaa & global marketplaces.</p>
+    <a href="#services" class="btn primary">Explore Services</a>
+  </div>
 </section>
 
 
-<!-- ABOUT -->
-<section id="about" class="section light">
-<h2>About Us</h2>
-
-<p class="text">
-We handle everything from logistics, taxes, localization and operations —
-giving brands a hassle-free full-service marketplace solution.
-Our diverse team ensures faster growth with data-driven strategies.
-</p>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section light reveal">
+  <h2>About Us</h2>
+  <p>
+    Network Media Inc. is a full-service eCommerce growth partner helping brands launch,
+    optimize and scale across global marketplaces with performance marketing,
+    creative content and data-driven growth strategies.
+  </p>
 </section>
 
 
-<!-- SERVICES -->
-<section id="services" class="section">
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section dark">
+  <h2>Our Services</h2>
 
-<h2>What We Do</h2>
+  <div class="grid">
 
-<div class="grid">
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6">
+      <h3>Marketplace Management</h3>
+      <p>Account setup, fulfillment, logistics, pricing & brand protection.</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<h3>Marketplace Management</h3>
-<p>Account strategy, logistics, fulfilment and brand protection.</p>
-</div>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b">
+      <h3>Performance Marketing</h3>
+      <p>Google, Meta & marketplace ads to maximize ROI.</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312">
-<h3>Performance Marketing</h3>
-<p>Google, Facebook, Instagram & YouTube ads optimized for ROI.</p>
-</div>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+      <h3>Content & Design</h3>
+      <p>SEO listings, creatives, product images & videos.</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<h3>Content & Design</h3>
-<p>SEO listings, product creatives & conversion optimization.</p>
-</div>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+      <h3>Growth Strategy</h3>
+      <p>Analytics, forecasting & international expansion plans.</p>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
-<h3>Growth Strategy</h3>
-<p>Analytics, demand planning and scalable expansion solutions.</p>
-</div>
-
-</div>
+  </div>
 </section>
 
 
-<!-- CTA -->
-<section class="cta">
-<h2>Ready to accelerate your commerce growth?</h2>
-<a href="#contact" class="btn dark">Start Partnership</a>
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" class="section light">
+  <h2>What Our Clients Say</h2>
+
+  <div class="slider">
+    <div class="slide active">"Sales grew 3x in 6 months!" – Brand Owner</div>
+    <div class="slide">"Best marketplace team we worked with." – Startup Founder</div>
+    <div class="slide">"Professional & ROI focused." – D2C Brand</div>
+  </div>
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact" class="section light">
-<h2>Contact Us</h2>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section dark">
+  <h2>Contact Us</h2>
 
-<p>📞 +91 9711660117</p>
-<p>📧 network.media@hotmail.com</p>
+  <form class="contact-form"
+    action="mailto:network.media@hotmail.com"
+    method="post"
+    enctype="text/plain">
 
-<a href="mailto:network.media@hotmail.com" class="btn">Email Now</a>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Message"></textarea>
+
+    <button class="btn primary">Send Message</button>
+  </form>
+
+  <p class="contact-info">
+    📞 +91 9711660117 | 📧 network.media@hotmail.com
+  </p>
 </section>
 
 
+<!-- ================= FOOTER ================= -->
 <footer>
-© 2026 Network Media Inc. | All Rights Reserved
+  © 2026 Network Media Inc. | All Rights Reserved
 </footer>
+
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a href="https://wa.me/919711660117" class="whatsapp" target="_blank">💬</a>
+
 
 <script src="script.js"></script>
 </body>
