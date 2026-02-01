@@ -12,105 +12,111 @@
 
 /* ================= GLOBAL ================= */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
-background:#0b1220;
-color:white;
-line-height:1.7;
-overflow-x:hidden;
+  background:#0b1220;
+  color:white;
+  line-height:1.7;
+  overflow-x:hidden;
 }
 
 /* ================= NAVBAR ================= */
 nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 80px;
-background:rgba(10,15,30,.7);
-backdrop-filter:blur(10px);
-z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 80px;
+  background:rgba(10,15,30,.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
 }
 
 nav ul{
-display:flex;
-gap:35px;
-list-style:none;
+  display:flex;
+  gap:35px;
+  list-style:none;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-font-size:14px;
-opacity:.8;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.8;
 }
 
 nav a:hover{
-color:#00d4ff;
+  color:#00d4ff;
 }
 
 /* ================= HERO SPLIT ================= */
 .hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 10%;
-gap:60px;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 10%;
+  gap:60px;
 
-background:
-radial-gradient(circle at 10% 20%, #00d4ff33, transparent 40%),
-radial-gradient(circle at 80% 70%, #0066ff33, transparent 40%);
+  background:
+    radial-gradient(circle at 10% 20%, #00d4ff33, transparent 40%),
+    radial-gradient(circle at 80% 70%, #0066ff33, transparent 40%);
 }
 
 .hero-text{
-flex:1;
+  flex:1;
 }
 
 .hero-text h1{
-font-size:64px;
-font-weight:700;
-margin-bottom:25px;
+  font-size:64px;
+  font-weight:700;
+  margin-bottom:25px;
 }
 
 .hero-text p{
-opacity:.8;
-max-width:600px;
+  opacity:.8;
+  max-width:600px;
 }
 
 .hero-img{
-flex:1;
+  flex:1;
 }
 
 .hero-img img{
-width:100%;
-border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,.6);
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 
 /* ================= BUTTON ================= */
 .btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 32px;
-border-radius:10px;
-background:linear-gradient(45deg,#00d4ff,#007bff);
-color:white;
-text-decoration:none;
-font-weight:600;
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 32px;
+  border-radius:10px;
+  background:linear-gradient(45deg,#00d4ff,#007bff);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
 }
 
 /* ================= SECTION ================= */
 .section{
   padding:120px 10%;
   text-align:center;
+}
+
+/* FIX ANCHOR SCROLL OFFSET */
+section {
+  scroll-margin-top: 100px; /* adjust based on navbar height */
 }
 
 .section.dark{
@@ -155,7 +161,7 @@ p{
 .tab{
   padding:18px 22px;
   border-radius:14px;
-  background:rgba(255,255,255,0.05); /* subtle dark */
+  background:rgba(255,255,255,0.05);
   border:1px solid rgba(255,255,255,0.15);
   cursor:pointer;
   transition:.35s;
@@ -173,8 +179,8 @@ p{
 
 /* Active Tab - subtle highlight */
 .tab.active{
-  background:rgba(255,255,255,0.12); /* slightly lighter */
-  border-color:#00c3ff; /* subtle glow */
+  background:rgba(255,255,255,0.12);
+  border-color:#00c3ff;
   color:white;
   font-weight:600;
   box-shadow:0 0 15px rgba(0,195,255,0.25);
@@ -199,18 +205,17 @@ p{
   display:block;
 }
 
-
 /* ================= STATS ================= */
 .stats{
-display:flex;
-justify-content:center;
-gap:80px;
-margin-top:60px;
+  display:flex;
+  justify-content:center;
+  gap:80px;
+  margin-top:60px;
 }
 
 .stat h3{
-font-size:46px;
-color:#00d4ff;
+  font-size:46px;
+  color:#00d4ff;
 }
 
 /* ================= IMAGE BLOCK ================= */
@@ -223,51 +228,59 @@ color:#00d4ff;
 }
 
 .image-block img{
-width:50%;
-border-radius:20px;
+  width:50%;
+  border-radius:20px;
 }
 
 .image-block div{
-flex:1;
+  flex:1;
 }
 
 /* ================= CTA ================= */
 .cta{
-background:linear-gradient(45deg,#00d4ff,#0066ff);
-padding:15px 20px;
-text-align:center;
+  background:linear-gradient(45deg,#00d4ff,#0066ff);
+  padding:15px 20px;
+  text-align:center;
 }
 
 /* ================= FOOTER ================= */
 footer{
-background:#050a14;
-padding:30px;
-text-align:center;
-opacity:.6;
+  background:#050a14;
+  padding:30px;
+  text-align:center;
+  opacity:.6;
 }
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
 
-.image-block{
-flex-direction:column;
-text-align:center;
-}
+  .image-block{
+    flex-direction:column;
+    text-align:center;
+  }
 
-.image-block img{
-width:100%;
-}
+  .image-block img{
+    width:100%;
+  }
 
-.stats{
-flex-direction:column;
-gap:30px;
-}
-}
+  .stats{
+    flex-direction:column;
+    gap:30px;
+  }
 
+  .services-split{
+    flex-direction:column;
+  }
+
+  .services-tabs,
+  .services-content{
+    width:100%;
+  }
+}
 
 </style>
 </head>
@@ -276,60 +289,49 @@ gap:30px;
 
 <!-- NAVBAR -->
 <nav>
-<strong>Network Media Inc.</strong>
+  <strong>Network Media Inc.</strong>
 
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#reach">Contact</a></li>
-</ul>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reach">Contact</a></li>
+  </ul>
 </nav>
-
-
 
 <!-- HERO -->
 <section id="home" class="hero">
+  <div class="hero-text">
+    <h1>Expand Globally. Grow Faster.</h1>
+    <p>
+      Network Media helps brands scale across Amazon, Walmart, Flipkart, Myntra,
+      Nykaa, Blinkit, Zepto, Instamart & more.
+    </p>
+    <a href="#services" class="btn">Explore Services</a>
+  </div>
 
-<div class="hero-text">
-<h1>Expand Globally. Grow Faster.</h1>
-
-<p>
-Network Media helps brands scale across Amazon, Walmart, Flipkart, Myntra,
-Nykaa, Blinkit, Zepto,Instamart & more.
-</p>
-
-<a href="#services" class="btn">Explore Services</a>
-</div>
-
-<div class="hero-img">
-<img src="images/hero.jpg">
-</div>
-
+  <div class="hero-img">
+    <img src="images/hero.jpg">
+  </div>
 </section>
-
-
 
 <!-- ABOUT -->
 <section id="about" class="section">
-<h2>About Us</h2>
+  <h2>About Us</h2>
+  <p>
+    Our team can help you overcome any challenges that come with going global. 
+    From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution. 
+    We help brands prepare for a digital-first approach to commerce. Our close-knit team is passionate about eCommerce and deeply service-oriented. 
+    Committed to helping you Launch, Grow & Optimize your business on Marketplaces. 
+    Most of our business comes through referrals — proof of our customer satisfaction.
+  </p>
 
-<p>
-Our team can help you overcome any challenges that come with going global. 
-  From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution. 
-  We help brands prepare for a digital-first approach to commerce. Our close-knit team is passionate about eCommerce and deeply service-oriented. 
-  Committed to helping you Launch, Grow & Optimize your business on Marketplaces. 
-  Most of our business comes through referrals — proof of our customer satisfaction.
-</p>
-
-<div class="stats">
-<div class="stat"><h3>50+</h3><p>Brands</p></div>
-<div class="stat"><h3>15+</h3><p>Marketplaces</p></div>
-<div class="stat"><h3>5x</h3><p>Growth</p></div>
-</div>
+  <div class="stats">
+    <div class="stat"><h3>50+</h3><p>Brands</p></div>
+    <div class="stat"><h3>15+</h3><p>Marketplaces</p></div>
+    <div class="stat"><h3>5x</h3><p>Growth</p></div>
+  </div>
 </section>
-
-
 
 <!-- ================= SERVICES ================= -->
 <section id="services" class="section dark">
@@ -343,73 +345,71 @@ Our team can help you overcome any challenges that come with going global.
   <div class="services-split">
 
     <!-- LEFT TABS -->
-<div class="services-tabs">
-  <div class="tab active" data-tab="t1">Marketplace Management</div>
-  <div class="tab" data-tab="t2">Digital & Performance Marketing</div>
-  <div class="tab" data-tab="t3">Strategy & Design</div>
-  <div class="tab" data-tab="t4">Business Analysis</div>
-</div>
-
+    <div class="services-tabs">
+      <div class="tab active" data-tab="t1">Marketplace Management</div>
+      <div class="tab" data-tab="t2">Digital & Performance Marketing</div>
+      <div class="tab" data-tab="t3">Strategy & Design</div>
+      <div class="tab" data-tab="t4">Business Analysis</div>
+    </div>
 
     <!-- RIGHT CONTENT -->
     <div class="services-content">
       <div class="content active" id="t1">
-        <h3>Marketplace Management</h3>
+        <h3>📦 Marketplace Management</h3>
         <p>Manage listings, inventory, and daily operations across Amazon, Flipkart, Walmart, Myntra, Nykaa, and other marketplaces to maximize reach and sales.</p>
       </div>
 
       <div class="content" id="t2">
-        <h3>Digital & Performance Marketing</h3>
+        <h3>📈 Digital & Performance Marketing</h3>
         <p>Data-driven ads, SEO, and social media campaigns on Google, Meta, and other channels to grow brand visibility and conversions.</p>
       </div>
 
       <div class="content" id="t3">
-        <h3>Strategy & Design</h3>
+        <h3>🎨 Strategy & Design</h3>
         <p>Branding, UI/UX, and growth strategies that align with business goals to create a stronger market presence.</p>
       </div>
 
       <div class="content" id="t4">
-        <h3>Business Analysis</h3>
+        <h3>📊 Business Analysis</h3>
         <p>Analytics, reporting, and competitor tracking to unlock growth opportunities and optimize performance.</p>
       </div>
     </div>
 
   </div>
 </section>
+
 <!-- IMAGE SECTION -->
 <section id="reach" class="section image-block">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200">
-
-<div>
-<h2>We Take The Lead in  e-Commerce</h2>
-<p>
-Data-driven decisions, smart advertising, and seamless operations
-help your brand win in competitive marketplaces.
-</p>
-</div>
+  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200">
+  <div>
+    <h2>We Take The Lead in e-Commerce</h2>
+    <p>
+      Data-driven decisions, smart advertising, and seamless operations
+      help your brand win in competitive marketplaces.
+    </p>
+  </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Let's Start a Partnership</h2>
-  </p>Are you ready to accelerate your e-Commerce growth?<p>
-<a href="mailto:network.media@hotmail.com" class="btn">Contact Now</a>
+  <h2>Let's Start a Partnership</h2>
+  <p>Are you ready to accelerate your e-Commerce growth?</p>
+  <a href="mailto:network.media@hotmail.com" class="btn">Contact Now</a>
 </section>
 
 <footer>
-© 2026 Network Media Inc. All rights reserved.
+  © 2026 Network Media Inc. All rights reserved.
 </footer>
 
-  <!-- ================= SCRIPT ================= -->
+<!-- ================= SCRIPT ================= -->
 <script>
-const tabs=document.querySelectorAll('.tab');
-const contents=document.querySelectorAll('.content');
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.content');
 
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    contents.forEach(c=>c.classList.remove('active'));
-
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById(tab.dataset.tab).classList.add('active');
   });
@@ -418,28 +418,3 @@ tabs.forEach(tab=>{
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
