@@ -118,31 +118,78 @@ font-size:42px;
 margin-bottom:25px;
 }
 
-/* ================= SERVICES ================= */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:60px;
+
+/* =====================================================
+   SERVICES SPLIT LAYOUT
+===================================================== */
+.services-split{
+  display:flex;
+  gap:40px;
+  margin-top:60px;
+  padding:40px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(6px);
 }
 
-.service{
-background:#111a2e;
-padding:40px;
-border-radius:18px;
-transition:.4s;
-text-decoration:none;
-color:white;
+/* LEFT TABS */
+.services-tabs{
+  width:320px;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
-.service:hover{
-transform:translateY(-12px);
-background:linear-gradient(45deg,#00d4ff,#0066ff);
+/* TAB CARD */
+.tab{
+  padding:18px 22px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.05); /* subtle dark */
+  border:1px solid rgba(255,255,255,0.15);
+  cursor:pointer;
+  transition:.35s;
+  color:#e2e8f0;
+  font-weight:500;
+  font-size:15px;
 }
 
-.service h3{
-margin-top:10px;
+/* Hover Effect */
+.tab:hover{
+  transform:translateX(6px);
+  border-color:#00c3ff;
+  box-shadow:0 0 12px rgba(0,195,255,0.2);
 }
+
+/* Active Tab - subtle highlight */
+.tab.active{
+  background:rgba(255,255,255,0.12); /* slightly lighter */
+  border-color:#00c3ff; /* subtle glow */
+  color:white;
+  font-weight:600;
+  box-shadow:0 0 15px rgba(0,195,255,0.25);
+}
+
+/* RIGHT CONTENT CARD */
+.services-content{
+  flex:1;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:18px;
+  padding:45px;
+  text-align:left;
+  transition:all 0.3s ease;
+}
+
+.content{
+  display:none;
+}
+
+.content.active{
+  display:block;
+}
+
 
 /* ================= STATS ================= */
 .stats{
@@ -330,6 +377,7 @@ help your brand win in competitive marketplaces.
 
 </body>
 </html>
+
 
 
 
