@@ -24,38 +24,42 @@ body{
   color:white;
   line-height:1.7;
   overflow-x:hidden;
+
+  padding-top:120px; /* ⭐ ADD THIS */
 }
 
-/* ================= NAVBAR ================= */
+
+/* ================= GOBBLE STYLE NAVBAR ================= */
 nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:18px 60px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(15,23,42,.85);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+position:fixed;
+top:22px;
+left:50%;
+transform:translateX(-50%);
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:14px 40px;
+gap:60px;
+
+border-radius:50px;
+
+/* glass look */
+background:rgba(15,23,42,0.75);
+backdrop-filter:blur(12px);
+
+/* outer outline */
+border:1px solid rgba(255,255,255,0.15);
+
+/* soft glow */
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+
+width:max-content;
+
+z-index:1000;
 }
 
-nav ul{
-  display:flex;
-  gap:30px;
-  list-style:none;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-  opacity:.85;
-}
-
-nav a:hover{
-  color:#00c3ff;
-}
 
 /* ================= HERO ================= */
 .hero{
@@ -157,6 +161,26 @@ p{
 .content.active{
   display:block;
 }
+
+  /* NAV LINKS ALIGN */
+nav ul{
+  display:flex;
+  gap:38px;
+  list-style:none;
+  align-items:center;
+}
+
+nav a{
+  color:#e2e8f0;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#00c3ff;
+}
+
 
 /* ================= BUTTON ================= */
 .btn{
@@ -304,3 +328,4 @@ tabs.forEach(tab=>{
 
 </body>
 </html>
+
