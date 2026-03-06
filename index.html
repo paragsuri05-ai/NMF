@@ -72,6 +72,11 @@ gap:42px;
 margin-left:auto;
 list-style:none;
 }
+   .has-submenu a{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
 
 nav ul li a{
@@ -537,7 +542,7 @@ nav{
 
   .nav-links{
 position:fixed;
-top:70px;
+top:60px;
 right:-100%;
 width:100%;
 height:100vh;
@@ -545,7 +550,7 @@ height:100vh;
     background:rgba(8,15,30,0.85);
 backdrop-filter:blur(14px);
     flex-direction:column;
-    padding:100px 30px 40px;
+    padding:30px 24px 40px;
     gap:24px;
 
     transition:0.4s ease;
@@ -557,13 +562,31 @@ backdrop-filter:blur(14px);
   }
 
  .nav-links li a{
-font-size:16px;
+font-size:15px;
 font-weight:500;
 letter-spacing:.2px;
 }
    .nav-links li{
 padding:10px 0;
 border-bottom:1px solid rgba(255,255,255,0.06);
+}
+   /* ===== MOBILE MENU CLEAN ===== */
+
+.nav-logo{
+font-size:15px;
+margin-bottom:10px;
+}
+
+.nav-links a{
+font-size:15px;
+font-weight:500;
+padding:10px 0;
+}
+
+.submenu a{
+font-size:14px;
+padding:8px 0;
+opacity:.85;
 }
 
 }
@@ -1219,6 +1242,7 @@ if(whatWeDoTrigger && whatWeDoMenu){
 
 </body>
 </html>
+
 
 
 
