@@ -94,18 +94,20 @@ opacity:1;
   position:relative;
 }
 
+/* ===== DESKTOP DROPDOWN ===== */
+
 .submenu{
   position:absolute;
   top:110%;
   left:0;
   min-width:260px;
+
   background:#020617;
   border-radius:14px;
   padding:10px;
   box-shadow:0 20px 50px rgba(0,0,0,0.6);
   z-index:9999;
 
-  /* Smooth animation */
   opacity:0;
   visibility:hidden;
   transform:translateY(10px);
@@ -116,6 +118,17 @@ opacity:1;
   opacity:1;
   visibility:visible;
   transform:translateY(0);
+}
+   /* ===== DESKTOP HOVER FIX ===== */
+
+@media (min-width:901px){
+
+  .has-submenu:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
 }
 
 .submenu li{
@@ -136,6 +149,30 @@ opacity:1;
   background:rgba(255,255,255,0.08);
 }
 
+/* ===== MOBILE SUBMENU FIX ===== */
+
+@media (max-width:900px){
+
+  .submenu{
+    position:static;
+    background:transparent;
+    box-shadow:none;
+    padding:0;
+    margin-top:10px;
+
+    display:none;
+  }
+
+  .submenu.open{
+    display:block;
+  }
+
+  .submenu a{
+    padding:10px 0;
+    opacity:.8;
+  }
+
+}
 
 /* ================= HERO SPLIT ================= */
 .hero{
@@ -448,79 +485,80 @@ to{   transform:translateX(-50%); }
    MOBILE RESPONSIVE (Clean + Gobblecube style)
    Desktop untouched
 ========================================= */
-
 @media (max-width:900px){
 
-  /* stop horizontal scroll */
   body{
     overflow-x:hidden;
   }
 
-  /* ================= NAVBAR ================= */
+  /* menu start below header so logo visible */
+  .nav-links{
+    top:70px;
+  }
 
-nav{
-  width:92% !important;
-  padding:12px 16px !important;
+  /* Mobile menu font */
+  .nav-links a{
+    font-size:16px;
+    font-weight:500;
+    letter-spacing:.2px;
+   font-family:'Inter',sans-serif;
+  }
 
-  left:50% !important;
-  transform:translateX(-50%) !important;
+  /* Gobblecube style divider lines */
+  .nav-links li{
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    padding:12px 0;
+  }
 
-  display:flex;
-  flex-direction:row !important;
-  justify-content:space-between;
-  align-items:center;
-
-  position:fixed !important;   /* ⭐ fix */
-  top:12px !important;         /* ⭐ fix */
-
-  border-radius:28px;
-  z-index:9999;                /* ⭐ always on top */
 }
-
-
+  /* ================= NAVBAR ================= */
 
   /* hamburger */
   .mobile-toggle{
-    display:flex !important;
-    flex-direction:column;
-    gap:5px;
-    cursor:pointer;
-  }
+  display:flex !important;
+  flex-direction:column;
+  gap:7px;
+  cursor:pointer;
+}
 
-  .mobile-toggle span{
-    width:26px;
-    height:3px;
-    background:white;
-    border-radius:3px;
-  }
+.mobile-toggle span{
+  width:22px;
+  height:2px;
+  background:white;
+  border-radius:2px;
+}
 
-  /* dropdown menu (RIGHT SIDE like Google/Gobblecube) */
+/* ===== MOBILE FULLSCREEN DRAWER ===== */
+
+@media (max-width:900px){
+
   .nav-links{
-    display:none !important;
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100vh;
 
-    position:absolute;
-    top:65px;
-    right:8px;
-
-
-    width:180px;
-    padding:18px;
-
-    background:rgba(15,23,42,0.98);
-    backdrop-filter:blur(10px);
-
-    border-radius:14px;
-
+    background:rgba(8,15,30,0.85);
+backdrop-filter:blur(14px);
     flex-direction:column;
-    gap:14px;
+    padding:100px 30px 40px;
+    gap:24px;
 
-    box-shadow:0 10px 40px rgba(0,0,0,.6);
+    transition:0.4s ease;
+    z-index:9998;
   }
 
-  .nav-active{
-    display:flex !important;
+  .nav-links.nav-active{
+    right:0;
   }
 
+  /* bigger spacing */
+  .nav-links li a{
+    font-size:18px;
+  }
+
+}
 
   /* ================= HERO ================= */
 
@@ -869,7 +907,6 @@ body{
 <div class="mobile-toggle" id="mobile-toggle">
   <span></span>
   <span></span>
-  <span></span>
 </div>
 
 <ul class="nav-links" id="nav-links">
@@ -1167,11 +1204,16 @@ if(whatWeDoTrigger && whatWeDoMenu){
 
 }
 
+  
+
 </script>
 
 
 </body>
 </html>
+
+
+
 
 
 
