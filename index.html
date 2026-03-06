@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +20,12 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-  background:
-    radial-gradient(circle at 20% 10%, rgba(0,212,255,0.12), transparent 35%),
-    radial-gradient(circle at 80% 90%, rgba(79,140,255,0.14), transparent 40%),
-    linear-gradient(180deg,#0b1220 0%, #0f1f3d 100%);
-  color: white;
-  line-height: 1.7;
-  overflow-x: hidden;
+background:#0b1220;
+color:white;
+line-height:1.7;
+overflow-x:hidden;
+   /* ⭐ NAVBAR space fix */
 }
-
 
 /* ================= CLEAN GOBBLE NAVBAR ================= */
 nav{
@@ -90,7 +87,96 @@ nav ul li a:hover{
 color:#ffffff;
 opacity:1;
 }
+   
+/* ================= SUBMENU (DESKTOP + MOBILE) ================= */
 
+.has-submenu{
+  position:relative;
+}
+
+/* ===== DESKTOP DROPDOWN ===== */
+
+.submenu{
+  position:absolute;
+  top:110%;
+  left:0;
+  min-width:260px;
+
+  background:#020617;
+  border-radius:14px;
+  padding:10px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+  z-index:9999;
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:all .25s ease;
+}
+
+.submenu.open{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+   /* ===== DESKTOP HOVER FIX ===== */
+
+@media (min-width:901px){
+
+  .has-submenu:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
+}
+
+.submenu li{
+  list-style:none;
+}
+
+.submenu a{
+  display:block;
+  padding:12px 14px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:10px;
+  transition:.2s ease;
+}
+
+.submenu a:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+/* ===== MOBILE VERSION ===== */
+
+@media (max-width:900px){
+
+  .submenu{
+    position:static;
+    background:transparent;
+    box-shadow:none;
+    padding:0;
+    margin-top:10px;
+
+    opacity:1;
+    visibility:visible;
+    transform:none;
+
+    display:none;
+  }
+
+  .submenu.open{
+    display:block;
+  }
+
+  .submenu a{
+    padding:10px 0;
+    opacity:.8;
+  }
+
+}
 
 
 /* ================= HERO SPLIT ================= */
@@ -186,81 +272,6 @@ opacity:.85;
 }
 
 
-/* =====================================================
-   SERVICES SPLIT LAYOUT (GobbleCube Style)
-===================================================== */
-
-.services-split{
-display:flex;
-gap:40px;
-margin-top:60px;
-padding:40px;
-
-border-radius:22px;
-border:1px solid rgba(255,255,255,0.08);
-
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(6px);
-}
-
-
-/* LEFT TABS */
-.services-tabs{
-  width:320px;
-  flex-shrink:0;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-
-/* TAB CARD */
-.tab{
-  padding:18px 22px;
-  border-radius:14px;
-  background:rgba(255,255,255,0.05); /* subtle dark */
-  border:1px solid rgba(255,255,255,0.15);
-  cursor:pointer;
-  transition:.35s;
-  color:#e2e8f0;
-  font-weight:500;
-  font-size:15px;
-}
-
-/* Hover Effect */
-.tab:hover{
-  transform:translateX(6px);
-  border-color:#00c3ff;
-  box-shadow:0 0 12px rgba(0,195,255,0.2);
-}
-
-/* Active Tab - subtle highlight */
-.tab.active{
-  background:rgba(255,255,255,0.12); /* slightly lighter */
-  border-color:#00c3ff; /* subtle glow */
-  color:white;
-  font-weight:600;
-  box-shadow:0 0 15px rgba(0,195,255,0.25);
-}
-
-/* RIGHT CONTENT CARD */
-.services-content{
-  flex:1;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:18px;
-  padding:45px;
-  text-align:left;
-  transition:all 0.3s ease;
-}
-
-.content{
-  display:none;
-}
-
-.content.active{
-  display:block;
-}
-
 /* ================= STATS ================= */
 .stats{
 display:flex;
@@ -298,6 +309,68 @@ background:linear-gradient(45deg,#00d4ff,#0066ff);
 padding:15px 20px;
 text-align:center;
 }
+
+   /* ================= GOBBLECUBE SERVICES ================= */
+
+.services-container{
+  display:flex;
+  gap:60px;
+  margin-top:60px;
+  padding:30px;
+  background:rgba(255,255,255,0.04);
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(14px);
+}
+
+.gc-tabs{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width:350px;
+}
+
+.gc-tab{
+  padding:18px 24px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.15);
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+  transition:.25s ease;
+  color:#d4e0f0;
+}
+
+.gc-tab:hover{
+  transform:translateX(6px);
+}
+
+.gc-tab.active{
+  background:linear-gradient(135deg,#00d4ff,#007bff);
+  color:white;
+  border:none;
+}
+
+.gc-content{
+  flex:1;
+  padding:30px;
+}
+
+.gc-box{
+  display:none;
+  animation:fadein .35s ease;
+}
+
+.gc-box.active{
+  display:block;
+}
+
+@keyframes fadein{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;}
+}
+
    /* ===== ABOUT BOX STYLING ===== */
 .about-box {
   background: rgba(255,255,255,0.05);
@@ -384,31 +457,28 @@ width:100%;
 
 /* moving row */
 .logos-track{
-  display:flex;
-  gap:60px;
-  align-items:center;
-  width:max-content;
-  animation:marqueeloop 12s linear infinite;
+display:flex;
+gap:80px;
+align-items:center;
+width:max-content;
+animation:marqueeloop 14s linear infinite;
 }
 
 
-/* Trusted Logos — stronger white & bolder */
-.trusted-box .logos-track img{
-  max-height:65px;
-  width:auto;
-  flex-shrink:0;
-
-  filter: brightness(0) invert(1);
-  opacity:.75;
-  transition:.3s ease;
+/* logos */
+.logos-track img{
+height:40px;
+width:auto;
+flex-shrink:0;
+filter:brightness(0) invert(1);
+opacity:1;
+transition:.3s;
 }
 
-.trusted-box .logos-track img:hover{
-  opacity:1;
-  transform:scale(1.1);
+.logos-track img:hover{
+opacity:1;
+transform:scale(1.1);
 }
-
-
 
 /* loop */
 @keyframes marqueeloop{
@@ -466,33 +536,51 @@ nav{
     border-radius:3px;
   }
 
-  /* dropdown menu (RIGHT SIDE like Google/Gobblecube) */
+/* ===== MOBILE FULLSCREEN DRAWER ===== */
+
+@media (max-width:900px){
+
   .nav-links{
-    display:none !important;
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100vh;
 
-    position:absolute;
-    top:65px;
-    right:8px;
-
-
-    width:180px;
-    padding:18px;
-
-    background:rgba(15,23,42,0.98);
-    backdrop-filter:blur(10px);
-
-    border-radius:14px;
-
+    background:linear-gradient(180deg,#071220,#0b1220);
     flex-direction:column;
-    gap:14px;
+    padding:100px 30px 40px;
+    gap:24px;
 
-    box-shadow:0 10px 40px rgba(0,0,0,.6);
+    transition:0.4s ease;
+    z-index:9998;
   }
 
-  .nav-active{
-    display:flex !important;
+  .nav-links.nav-active{
+    right:0;
   }
 
+  /* bigger spacing */
+  .nav-links li a{
+    font-size:18px;
+  }
+
+  /* submenu full width */
+  .submenu{
+    position:static;
+    background:transparent;
+    padding:0;
+    box-shadow:none;
+    margin-top:12px;
+    transform:none;
+  }
+
+  .submenu a{
+    padding:10px 0;
+    opacity:.75;
+  }
+
+}
 
   /* ================= HERO ================= */
 
@@ -514,42 +602,25 @@ nav{
   }
 
 
-  /* ================= SERVICES ================= */
+  /* ===== GC MOBILE ACCORDION FIX ===== */
 
-  .services-split{
-    flex-direction:column !important;
-    padding:20px !important;
-  }
+.gc-content{
+  display:none !important; /* hide right panel on mobile */
+}
 
-  .services-tabs{
-    width:100% !important;
-  }
+.gc-tab{
+  width:100%;
+}
 
-  /* hide right panel on mobile */
-  .services-content{
-    display:none !important;
-  }
+.mobile-accordion{
+  margin-top:14px;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.15);
+  animation:fadein .3s ease;
+}
 
-  /* each tab full width */
-  .tab{
-    width:100%;
-  }
-
-  /* accordion box */
-  .mobile-content{
-    display:none;
-    padding:14px;
-    margin-top:10px;
-    border-radius:12px;
-
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.12);
-    font-size:14px;
-  }
-
-  .mobile-content.show{
-    display:block;
-  }
 
 
   /* ================= IMAGE BLOCK ================= */
@@ -666,6 +737,185 @@ nav{
 
 }
 
+   /* ===== GOBBLECUBE PIXEL PERFECT ===== */
+
+body{
+  font-family:'Inter',sans-serif;
+}
+
+/* SECTION BG */
+.gc-section{
+  padding:120px 6%;
+  background:
+    radial-gradient(circle at 20% 20%, #0c1a30, #08101d 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.03) 0px,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.03) 0px,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+}
+
+/* TITLE */
+.gc-title{
+  text-align:center;
+  font-size:46px;
+  margin-bottom:70px;
+}
+
+/* MAIN WRAPPER */
+.gc-wrapper{
+  display:flex;
+  gap:50px;
+  padding:50px;
+  border-radius:28px;
+
+  background:rgba(255,255,255,.03);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.06),
+    0 20px 60px rgba(0,0,0,.5);
+}
+
+
+
+
+/* LEFT TABS */
+.gc-tabs{
+  flex:0 0 340px;   /* fixed width like Gobble */
+  min-width:280px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.gc-tab{
+  padding:24px 30px;
+  border-radius:18px;
+
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+
+  cursor:pointer;
+  font-size:16px;
+  transition:.25s;
+  color:#cfd9e6;
+}
+
+.gc-tab:hover{
+  transform:translateX(6px);
+}
+
+.gc-tab.active{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.20);
+  color:#ffffff;
+}
+
+
+/* RIGHT PANEL */
+.gc-content{
+  flex:1;
+  min-width:0;
+  padding:32px;
+  border-radius:22px;
+
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.02);
+}
+
+
+/* CONTENT */
+.gc-box{display:none;}
+.gc-box.active{display:block;}
+
+.gc-icons{
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+.gc-content h3{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.gc-content p{
+  font-size:17px;
+  opacity:.85;
+  max-width:640px;
+  line-height:1.7;
+}
+
+/* BUTTON */
+.gc-btn{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 24px;
+  border-radius:14px;
+
+  background:linear-gradient(90deg,#1e3a8a,#2563eb);
+  color:white;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+
+  box-shadow:0 6px 20px rgba(37,99,235,.4);
+  transition:.3s ease;
+}
+
+.gc-btn:hover{
+  transform:translateY(-2px);
+}
+
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .gc-wrapper{
+    flex-direction:column !important;
+    margin:0 16px !important;
+    padding:22px !important;
+    border-radius:22px !important;
+  }
+
+  /* Hide right panel on mobile */
+  .gc-content{
+    display:none !important;
+  }
+
+  .gc-tabs{
+    width:100% !important;
+  }
+
+  .gc-tab{
+    width:100%;
+    padding:18px 20px !important;
+     
+    border-radius:14px !important;
+    font-size:15px !important;
+  }
+
+  .gc-content h3{
+    font-size:24px !important;
+    line-height:1.3;
+  }
+
+  .gc-content p{
+    font-size:14px !important;
+    line-height:1.6;
+    opacity:.8;
+  }
+
+}
 </style>
 </head>
 
@@ -683,11 +933,24 @@ nav{
 </div>
 
 <ul class="nav-links" id="nav-links">
-<li><a href="#about">Know Us</a></li>
-<li><a href="#services">What We Do</a></li>
-<li><a href="#trusted">Partners</a></li>
-<li><a href="#reach">Reach Us</a></li>
+  <li><a href="#about">Know Us</a></li>
+
+  <!-- WHAT WE DO : submenu opener only -->
+  <li class="has-submenu">
+<a href="#" id="whatWeDoTrigger">What We Do ▾</a>
+
+    <ul class="submenu" id="whatWeDoMenu">
+      <li><a href="services/marketplace-management.html">Marketplace Management</a></li>
+      <li><a href="services/performance-marketing.html">Performance Marketing</a></li>
+      <li><a href="services/growth-strategy.html">Growth Strategy</a></li>
+      <li><a href="services/business-intelligence.html">Business Intelligence</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#trusted">Partners</a></li>
+  <li><a href="#reach">Reach Us</a></li>
 </ul>
+
 
 </nav>
 
@@ -765,7 +1028,6 @@ Nykaa, Blinkit, Zepto,Instamart & more.
         <img src="images/logos/jiomart.svg" alt="Jio Mart">
         <img src="images/logos/walmart.svg" alt="Walmart">
         <img src="images/logos/noon.svg" alt="Noon">
-
         <!-- duplicate for smooth loop -->
         <img src="images/logos/amazon.svg">
         <img src="images/logos/flipkart.svg">
@@ -789,62 +1051,59 @@ Nykaa, Blinkit, Zepto,Instamart & more.
 </section>
 
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section dark">
+<section id="services" class="gc-section">
 
-<h2>What We Do</h2>
+<h2 class="gc-title">What We Do</h2>
 
-<div class="services-split">
+<div class="gc-wrapper">
 
   <!-- LEFT TABS -->
-  <div class="services-tabs">
+  <div class="gc-tabs">
 
-    <div class="tab active" data-tab="t1">
-      <span class="tab-title">Marketplace Management</span>
-      <div class="mobile-content">
-        Catalog setup, listing optimization and daily operations to maximize sales.
-      </div>
-    </div>
-
-    <div class="tab" data-tab="t2">
-      <span class="tab-title">Performance Marketing</span>
-      <div class="mobile-content">
-        ROI focused ads on Meta & Google to drive scalable conversions.
-      </div>
-    </div>
-
-    <div class="tab" data-tab="t3">
-      <span class="tab-title">Business Analysis</span>
-      <div class="mobile-content">
-        Data insights, reports and competitor tracking to unlock growth opportunities.
-      </div>
-    </div>
+    <div class="gc-tab active" data-tab="t1">What’s hurting my sales?</div>
+    <div class="gc-tab" data-tab="t2">How can I improve my marketing ROI?</div>
+    <div class="gc-tab" data-tab="t3">How do I ensure demand fulfillment?</div>
+    <div class="gc-tab" data-tab="t4">How do I scale faster?</div>
 
   </div>
 
 
-  <!-- RIGHT CONTENT (desktop only) -->
-  <div class="services-content">
+  <!-- RIGHT PANEL -->
+  <div class="gc-content">
 
-    <div class="content-box active" id="t1">
-      <h3>Marketplace Management</h3>
-      <p>Catalog setup, listing optimization and daily operations to maximize sales.</p>
+    <div class="gc-box active" id="t1">
+      <div class="gc-icons"></div>
+      <h3>Get clear actions with root-cause diagnostics</h3>
+      <p>We analyze pricing, visibility and fulfillment barriers across platforms so you know exactly what’s hurting your sales.</p>
+      <a href="#" class="gc-btn">Explore Solutions →</a>
     </div>
 
-    <div class="content-box" id="t2">
-      <h3>Performance Marketing</h3>
-      <p>ROI focused ads on Meta & Google to drive scalable conversions.</p>
+    <div class="gc-box" id="t2">
+      <div class="gc-icons"></div>
+      <h3>Boost ROI with performance marketing</h3>
+      <p>Data-driven Meta & Google campaigns designed for predictable scaling and conversions.</p>
+      <a href="#" class="gc-btn">Explore Solutions →</a>
     </div>
 
-    <div class="content-box" id="t3">
-      <h3>Business Analysis</h3>
-      <p>Data insights, reports and competitor tracking to unlock growth opportunities.</p>
+    <div class="gc-box" id="t3">
+      <div class="gc-icons"></div>
+      <h3>Demand & fulfillment optimization</h3>
+      <p>Inventory sync, supply chain insights and forecasting to never miss a sale opportunity.</p>
+      <a href="#" class="gc-btn">Explore Solutions →</a>
+    </div>
+
+    <div class="gc-box" id="t4">
+      <div class="gc-icons"></div>
+      <h3>Scale with the right growth strategy</h3>
+      <p>Marketplace expansion, automation and long-term growth planning.</p>
+      <a href="#" class="gc-btn">Explore Solutions →</a>
     </div>
 
   </div>
 
 </div>
 </section>
+
 
 <!-- IMAGE SECTION -->
 <section id="reach" class="section image-block">
@@ -872,70 +1131,122 @@ help your brand win in competitive marketplaces.
 © 2026 Network Media Inc. All rights reserved.
 </footer>
    
-
-   
-<!-- ================= SCRIPT ================= -->
 <script>
 
-/* ===== SERVICES (desktop + mobile both) ===== */
+/* ================= GOBBLECUBE TABS ================= */
 
-const tabs = document.querySelectorAll('.tab');
-const boxes = document.querySelectorAll('.content-box');
+const gcTabs = document.querySelectorAll('#services .gc-tab');
+const gcBoxes = document.querySelectorAll('#services .gc-box');
 
-tabs.forEach(tab=>{
+if(gcTabs.length && gcBoxes.length){
 
-  tab.addEventListener('click', ()=>{
+  gcTabs.forEach(tab => {
 
-    const id = tab.dataset.tab;
+    tab.addEventListener('click', () => {
 
-    /* remove active */
-    tabs.forEach(t=>t.classList.remove('active'));
-    boxes.forEach(b=>b.classList.remove('active'));
+      const targetId = tab.getAttribute('data-tab');
+      const targetBox = document.getElementById(targetId);
 
-    tab.classList.add('active');
+      if(!targetBox) return;
 
-    /* DESKTOP right content */
-    const box = document.getElementById(id);
-    if(box) box.classList.add('active');
+      /* ===== DESKTOP ===== */
+      if (window.innerWidth > 900) {
 
-    /* MOBILE accordion */
-    if(window.innerWidth <= 900){
+        gcTabs.forEach(t => t.classList.remove('active'));
+        gcBoxes.forEach(b => b.classList.remove('active'));
 
-      const mobileBox = tab.querySelector('.mobile-content');
+        document.querySelectorAll('.mobile-accordion')
+          .forEach(el => el.remove());
 
-      document.querySelectorAll('.mobile-content')
-        .forEach(c=>{
-          if(c !== mobileBox) c.classList.remove('show');
-        });
+        tab.classList.add('active');
+        targetBox.classList.add('active');
+      }
 
-      mobileBox.classList.toggle('show');
-    }
+      /* ===== MOBILE ===== */
+      else {
+
+        document.querySelectorAll('.mobile-accordion')
+          .forEach(el => el.remove());
+
+        if (tab.querySelector('.mobile-accordion')) return;
+
+        const clone = targetBox.cloneNode(true);
+        clone.classList.remove('gc-box');
+        clone.classList.add('mobile-accordion');
+
+        tab.appendChild(clone);
+      }
+
+    });
 
   });
 
-});
+}
 
 
-/* ===== MOBILE NAV TOGGLE ===== */
+/* ================= MOBILE NAV TOGGLE ================= */
 
 const toggle = document.getElementById("mobile-toggle");
-const menu = document.getElementById("nav-links");
+const navMenu = document.getElementById("nav-links");
 
-toggle.onclick = ()=>{
-  menu.classList.toggle("nav-active");
-};
+if(toggle && navMenu){
 
-/* auto close after click */
-document.querySelectorAll("#nav-links a").forEach(link=>{
-  link.onclick = ()=>{
-    menu.classList.remove("nav-active");
-  };
-});
+  toggle.addEventListener("click", ()=>{
+    navMenu.classList.toggle("nav-active");
+  });
+
+  document.querySelectorAll("#nav-links a").forEach(link=>{
+    link.addEventListener("click", ()=>{
+      if(link.closest('.has-submenu')) return;
+      navMenu.classList.remove("nav-active");
+    });
+  });
+
+}
+
+
+/* ================= SUBMENU TOGGLE ================= */
+
+const whatWeDoTrigger = document.getElementById("whatWeDoTrigger");
+const whatWeDoMenu = document.getElementById("whatWeDoMenu");
+
+if(whatWeDoTrigger && whatWeDoMenu){
+
+  whatWeDoTrigger.addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    whatWeDoMenu.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function(e){
+    if(!whatWeDoMenu.contains(e.target) &&
+       !whatWeDoTrigger.contains(e.target)){
+      whatWeDoMenu.classList.remove("open");
+    }
+  });
+
+}
+
+   /* ===== MOBILE ACCORDION FIX ===== */
+
+if(window.innerWidth <= 900){
+
+  whatWeDoTrigger.addEventListener("click", function(e){
+    e.preventDefault();
+
+    whatWeDoMenu.style.display =
+      whatWeDoMenu.style.display === "block" ? "none" : "block";
+  });
+
+}
 
 </script>
 
+
 </body>
 </html>
+
+
 
 
 
