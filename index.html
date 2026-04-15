@@ -964,19 +964,7 @@ body{
 
 <ul class="nav-links" id="nav-links">
   <li><a href="#about">Know Us</a></li>
-
-  <!-- WHAT WE DO : submenu opener only -->
-  <li class="has-submenu">
-<a href="#" id="whatWeDoTrigger">What We Do ▾</a>
-
-  <ul class="submenu" id="whatWeDoMenu">
-<li><a href="service-pages/marketplace-management.html">Marketplace Management</a></li>
-<li><a href="service-pages/performance-marketing.html">Performance Marketing</a></li>
-<li><a href="service-pages/growth-strategy.html">Growth Strategy</a></li>
-<li><a href="service-pages/business-intelligence.html">Business Intelligence</a></li>
-</ul>
-     </li> 
-
+<li><a href="#services">What We Do</a></li>
   <li><a href="#trusted">Partners</a></li>
   <li><a href="#reach">Reach Us</a></li>
 </ul>
@@ -1226,29 +1214,6 @@ if(toggle && navMenu){
       if(link.closest('.has-submenu')) return;
       navMenu.classList.remove("nav-active");
     });
-  });
-
-}
-
-
-/* ================= SUBMENU TOGGLE ================= */
-
-const whatWeDoTrigger = document.getElementById("whatWeDoTrigger");
-const whatWeDoMenu = document.getElementById("whatWeDoMenu");
-
-if(whatWeDoTrigger && whatWeDoMenu){
-
-  whatWeDoTrigger.addEventListener("click", function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    whatWeDoMenu.classList.toggle("open");
-  });
-
-  document.addEventListener("click", function(e){
-    if(!whatWeDoMenu.contains(e.target) &&
-       !whatWeDoTrigger.contains(e.target)){
-      whatWeDoMenu.classList.remove("open");
-    }
   });
 
 }
