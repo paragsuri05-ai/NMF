@@ -103,11 +103,13 @@ opacity:1;
 
 .submenu{
   position:absolute;
-  top:110%;
-  left:0;
+ top:100%;
+margin-top:18px;
+  left:20%;
+transform:translateX(-50%) translateY(10px);
   min-width:260px;
 
-  background:#020617;
+  background:#111827;
   border-radius:14px;
   padding:10px;
   box-shadow:0 20px 50px rgba(0,0,0,0.6);
@@ -466,12 +468,23 @@ animation:marqueeloop 14s linear infinite;
 
 
 /* logos */
+.logos-track{
+display:flex;
+align-items:center;
+gap:70px;
+}
+
+/* ⭐ BALANCED FIX */
 .logos-track img{
-height:40px;
-width:auto;
+height:48px;          /* ⭐ size bada */
+width:auto;           /* ⭐ original proportion */
+max-width:140px;      /* ⭐ control wide logos */
+
+object-fit:contain;
 flex-shrink:0;
+
 filter:brightness(0) invert(1);
-opacity:1;
+opacity:.9;
 transition:.3s;
 }
 
@@ -542,16 +555,17 @@ nav{
 
 .nav-links{
 position:fixed;
-top:70px;
+top:67px;
 right:-100%;
+width:90%;
+left:95%;
+   
+   background:rgba(17,24,39,0.95);
 
-left:80%;
-transform:translateX(-50%);
-width:92%;
-
-background:#111827;
-
-border-radius:22px;
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+   
+   border-radius:22px;
 border:1px solid rgba(255,255,255,0.08);
 
 flex-direction:column;
@@ -561,6 +575,7 @@ gap:16px;
 transition:0.4s ease;
 z-index:9998;
 }
+
   .nav-links.nav-active{
     right:0;
   }
@@ -671,9 +686,12 @@ opacity:.55;
     width:100%;
     text-align:center;
   }
-   .btn{
-  width:100%;
-  text-align:center;
+   
+ .hero .btn{
+  width:auto;
+  max-width:260px;
+  display:block;
+  margin:30px auto 0;
 }
 
 /* ================= ABOUT (Know Us) MOBILE FIX ================= */
@@ -951,13 +969,13 @@ body{
   <li class="has-submenu">
 <a href="#" id="whatWeDoTrigger">What We Do ▾</a>
 
-    <ul class="submenu" id="whatWeDoMenu">
-      <li><a href="services/marketplace-management.html">Marketplace Management</a></li>
-      <li><a href="services/performance-marketing.html">Performance Marketing</a></li>
-      <li><a href="services/growth-strategy.html">Growth Strategy</a></li>
-      <li><a href="services/business-intelligence.html">Business Intelligence</a></li>
-    </ul>
-  </li>
+  <ul class="submenu" id="whatWeDoMenu">
+<li><a href="service-pages/marketplace-management.html">Marketplace Management</a></li>
+<li><a href="service-pages/performance-marketing.html">Performance Marketing</a></li>
+<li><a href="service-pages/growth-strategy.html">Growth Strategy</a></li>
+<li><a href="service-pages/business-intelligence.html">Business Intelligence</a></li>
+</ul>
+     </li> 
 
   <li><a href="#trusted">Partners</a></li>
   <li><a href="#reach">Reach Us</a></li>
@@ -971,13 +989,13 @@ body{
 
 <div class="hero-text">
 <h1>
-Expand Globally.<br>
+Scale Smarter.<br>
 <span class="highlight">Grow</span> Faster.
 </h1>
 
 
 <p>
-Network Media helps brands scale across Amazon, Walmart, Flipkart, Myntra,
+Network Media helps brands scale across Amazon, Flipkart, Myntra,
 Nykaa, Blinkit, Zepto,Instamart & more.
 </p>
 
@@ -999,11 +1017,10 @@ Nykaa, Blinkit, Zepto,Instamart & more.
   <div class="about-box">
 
     <p>
-      Our team can help you overcome any challenges that come with going global. 
-      From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution. 
-      We help brands prepare for a digital-first approach to commerce. Our close-knit team is passionate about eCommerce and deeply service-oriented. 
-      Committed to helping you Launch, Grow & Optimize your business on Marketplaces. 
-      Most of our business comes through referrals — proof of our customer satisfaction.
+      We help brands solve complex marketplace challenges and scale sustainably across channels.
+From pricing and inventory to demand generation and profitability, we build structured growth systems — not just campaigns.
+With a strong focus on marketplaces and quick commerce, we enable brands to launch, scale, and optimize performance in a fast-moving digital ecosystem.
+Our approach is hands-on, data-driven, and outcome-focused — which is why most of our partnerships are built through referrals.
     </p>
 
     <div class="stats">
@@ -1019,7 +1036,7 @@ Nykaa, Blinkit, Zepto,Instamart & more.
  <!-- ================= TRUSTED ================= -->
 <section id="trusted" class="trusted">
 
-  <h2>Trusted By Leading Brands</h2>
+  <h2>Trusted Across Leading Platforms</h2>
 
   <div class="trusted-box">
 
@@ -1031,28 +1048,25 @@ Nykaa, Blinkit, Zepto,Instamart & more.
         <img src="images/logos/amazon.svg" alt="Amazon">
         <img src="images/logos/flipkart.svg" alt="Flipkart">
         <img src="images/logos/myntra.svg" alt="Myntra">
-        <img src="images/logos/meesho.svg" alt="Meesho">
         <img src="images/logos/nykaa.svg" alt="Nykaa">
         <img src="images/logos/blinkit.svg" alt="Blinkit">
         <img src="images/logos/instamart.svg" alt="Instamart">
         <img src="images/logos/zepto.svg" alt="Zepto">
         <img src="images/logos/bigbasket.svg" alt="Big Basket">
         <img src="images/logos/jiomart.svg" alt="Jio Mart">
-        <img src="images/logos/walmart.svg" alt="Walmart">
-        <img src="images/logos/noon.svg" alt="Noon">
+      
+        
         <!-- duplicate for smooth loop -->
         <img src="images/logos/amazon.svg">
         <img src="images/logos/flipkart.svg">
         <img src="images/logos/myntra.svg">
-        <img src="images/logos/meesho.svg">
         <img src="images/logos/nykaa.svg">
         <img src="images/logos/blinkit.svg">
         <img src="images/logos/instamart.svg">
         <img src="images/logos/zepto.svg">
         <img src="images/logos/bigbasket.svg">
         <img src="images/logos/jiomart.svg">
-        <img src="images/logos/walmart.svg">
-        <img src="images/logos/noon.svg">
+   
 
       </div>
 
@@ -1065,7 +1079,7 @@ Nykaa, Blinkit, Zepto,Instamart & more.
 
 <section id="services" class="gc-section">
 
-<h2 class="gc-title">What We Do</h2>
+<h2 class="gc-title">How Network Media Delivers Growth?</h2>
 
 <div class="gc-wrapper">
 
@@ -1087,28 +1101,28 @@ Nykaa, Blinkit, Zepto,Instamart & more.
       <div class="gc-icons"></div>
       <h3>Get clear actions with root-cause diagnostics</h3>
       <p>We analyze pricing, visibility and fulfillment barriers across platforms so you know exactly what’s hurting your sales.</p>
-      <a href="#" class="gc-btn">Explore Solutions →</a>
+       <a href="service-pages/marketplace-management.html" class="gc-btn">Explore Solutions →</a>
     </div>
 
     <div class="gc-box" id="t2">
       <div class="gc-icons"></div>
       <h3>Boost ROI with performance marketing</h3>
       <p>Data-driven Meta & Google campaigns designed for predictable scaling and conversions.</p>
-      <a href="#" class="gc-btn">Explore Solutions →</a>
+       <a href="service-pages/performance-marketing.html" class="gc-btn">Explore Solutions →</a>
     </div>
 
     <div class="gc-box" id="t3">
       <div class="gc-icons"></div>
       <h3>Demand & fulfillment optimization</h3>
       <p>Inventory sync, supply chain insights and forecasting to never miss a sale opportunity.</p>
-      <a href="#" class="gc-btn">Explore Solutions →</a>
+      <a href="service-pages/growth-strategy.html" class="gc-btn">Explore Solutions →</a>
     </div>
 
     <div class="gc-box" id="t4">
       <div class="gc-icons"></div>
       <h3>Scale with the right growth strategy</h3>
       <p>Marketplace expansion, automation and long-term growth planning.</p>
-      <a href="#" class="gc-btn">Explore Solutions →</a>
+      <a href="service-pages/business-intelligence.html" class="gc-btn">Explore Solutions →</a>
     </div>
 
   </div>
@@ -1246,6 +1260,14 @@ if(whatWeDoTrigger && whatWeDoMenu){
 
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
